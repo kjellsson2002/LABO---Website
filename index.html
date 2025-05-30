@@ -1,45 +1,19 @@
 <!DOCTYPE html>
+<!-- npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch  -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailwind CSS Demo</title>
-    <!-- Include Tailwind CSS from CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      // Optional: You can configure Tailwind JIT mode for faster compilation (good for development)
-      // or extend the default theme here.
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              'custom-blue': '#243c5a',
-            }
-          }
-        }
-      }
-    </script>
-    <style>
-        /* You can add custom CSS here if absolutely necessary, but try to use Tailwind utilities first */
-    </style>
+    <title>Vegas sida</title>
+
+    <!-- Link to your compiled Tailwind CSS file -->
+    <link href="src/output.css" rel="stylesheet">
 </head>
+
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
 
-    <!-- Navigation Bar -->
-    <nav class="bg-blue-600 p-4 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-white text-2xl font-bold">TailwindDemo</a>
-            <div class="space-x-4">
-                <a href="#" class="text-blue-100 hover:text-white transition duration-150">Home</a>
-                <a href="#" class="text-blue-100 hover:text-white transition duration-150">About</a>
-                <a href="#" class="text-blue-100 hover:text-white transition duration-150">Services</a>
-                <a href="#" class="text-blue-100 hover:text-white transition duration-150">Contact</a>
-            </div>
-        </div>
-    </nav>
-
     <!-- Hero Section -->
-    <header class="bg-custom-blue text-white py-20">
+    <header class="bg-custom-blue text-blue-700 py-20">
         <div class="container mx-auto text-center">
             <h1 class="text-5xl font-extrabold mb-4">Welcome to Tailwind CSS</h1>
             <p class="text-xl mb-8 text-blue-200">A utility-first CSS framework for rapid UI development.</p>
@@ -71,75 +45,10 @@
                 </div>
             </div>
 
-            <!-- Card 2 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x250/777/fff?text=Feature+2" alt="Feature 2">
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2 text-gray-800">Utility First</h3>
-                    <p class="text-gray-600 text-base">
-                        Compose complex components from a constrained set of primitive utilities, directly in your HTML.
-                    </p>
-                     <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-150">
-                        Explore Utilities
-                    </button>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x250/666/fff?text=Feature+3" alt="Feature 3">
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2 text-gray-800">Highly Customizable</h3>
-                    <p class="text-gray-600 text-base">
-                        Easily extend, tweak, or completely override the default configuration file to match your design system.
-                    </p>
-                     <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded transition duration-150">
-                        Customize
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Simple Form Section -->
-        <section class="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
-            <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Contact Us</h2>
-            <form action="#" method="POST">
-                <div class="mb-4">
-                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Full Name:</label>
-                    <input type="text" id="name" name="name"
-                           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                           placeholder="John Doe">
-                </div>
-                <div class="mb-4">
-                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address:</label>
-                    <input type="email" id="email" name="email"
-                           class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                           placeholder="you@example.com">
-                </div>
-                <div class="mb-6">
-                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message:</label>
-                    <textarea id="message" name="message" rows="4"
-                              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                              placeholder="Your message..."></textarea>
-                </div>
-                <div class="flex items-center justify-center">
-                    <button type="submit"
-                            class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-6 rounded-lg focus:outline-none focus:shadow-outline transition duration-150 ease-in-out">
-                        Send Message
-                    </button>
-                </div>
-            </form>
-        </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 p-8 mt-12">
-        <div class="container mx-auto text-center">
-            <p>© 2023 Tailwind CSS Demo. All rights reserved.</p>
-            <p class="text-sm">Built with <span class="text-blue-400">Tailwind CSS</span></p>
-        </div>
-    </footer>
+
 
 </body>
 </html>
