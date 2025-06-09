@@ -10,47 +10,58 @@
     <link href="src/output.css" rel="stylesheet">
 </head>
 
-<body class="bg-orange-100 font-sans leading-normal tracking-normal">
-
-    <!-- Hero Section -->
-    <header class="bg-custom-blue text-red-800 py-20">
-        <div class="container mx-auto text-left ">
-            <h1 class="text-5xl font-extrabold mb-4 ml-10">LÄBO</h1>
-            <p class="text-3xl mb-8 text-gray-600 ml-10">Arkitektur</p>
-            
-            <a href="#" class="bg-red-500 hover:bg-red-900 text-orange-100 font-bold py-3 px-7 text-lg transition duration-150 ease-in-out transform hover:scale-105 ml-10 mt-10">
-                Portfolio
-            </a>
-            <p class="text-xl ml-5 mb-8 text-gray-600 mt-8">Vega Kjellsson</p>
-        </div>
-    </header>
-
-    <!-- Main Content Area -->
-    <main class="container mx-auto p-8">
-
-        <!-- Section Title -->
-        <h2 class="text-3xl font-semibold text-gray-400 mb-8 text-center">Features Showcase</h2>
-
-        <!-- Cards Section - Responsive Grid -->
-        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <!-- Card 1 -->
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <img class="w-full h-48 object-cover" src="https://via.placeholder.com/400x250/888/fff?text=Feature+1" alt="Feature 1">
-                <div class="p-6">
-                    <h3 class="font-bold text-xl mb-2 text-gray-800">Responsive Design</h3>
-                    <p class="text-gray-800 text-base">
-                        Tailwind makes it easy to build responsive layouts that adapt to any screen size using intuitive utility classes.
-                    </p>
-                    <button class="mt-4 bg-red-500 hover:bg-red-900 text-orange-100 font-semibold py-2 px-4 rounded transition duration-150">
-                        Learn More
-                    </button>
+    <!-- HERO SECTION START -->
+    <section class="px-10 pt-32 pb-20 bg-black">
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-2 items-center justify-items-center gap-10">
+    
+                <!-- Image Section -->
+                <div class="order-2 lg:order-1 shadow-2xl">
+                    <img 
+                        class="h-80 w-80 object-cover lg:w-[500px] lg:h-[500px]" 
+                        src="Image/25_År.png" 
+                        alt="A modern architectural building designed by Läbo" 
+                    />
                 </div>
+    
+                <!-- Text Content Section -->
+                <div class="order-1 lg:order-2 flex flex-col justify-center lg:items-start lg:text-left">
+                    <p class="text-4xl font-bold md:text-7xl text-white">
+                        Vega Kjellsson
+                    </p>
+                    <p class="mt-2 text-3xl md:text-5xl text-white">
+                        Founder of <span class="text-orange-600">Läbo</span>
+                    </p>
+                    
+                    <!-- Typewriter Text Container -->
+                    <p class="text-3xl md:text-5xl text-white h-20 md:h-32 lg:h-24">
+                        We Design <span id="typewriter"></span>
+                    </p>
+                    
+                    <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-lg">
+                        An architectural studio devoted to crafting thoughtful and sustainable environments where form and function unite.
+                    </p>
+                    
+                    <!-- Call to Action Buttons -->
+                    <div class='flex flex-col sm:flex-row items-center mt-10'>
+                        <a href='#contact' class="text-lg md:text-xl bg-orange-600 text-white py-3 px-6 my-2 hover:bg-zinc-800 rounded-full transition-colors duration-300">
+                            Contact Us
+                        </a>
+                        <a href='#projects' class="text-lg md:text-xl bg-gray-800 text-white py-3 px-6 m-2 mt-4 sm:mt-2 hover:bg-orange-600 rounded-full transition-colors duration-300">
+                            Our Work
+                        </a>
+                    </div>
+    
+                    <!-- Social Media Links Placeholder -->
+                    <div class="mt-8 flex space-x-6">
+                        <!-- Replace # with your actual links -->
+                        <a href="#" class="text-gray-400 hover:text-orange-600 transition-colors">LinkedIn</a>
+                        <a href="#" class="text-gray-400 hover:text-orange-600 transition-colors">Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-orange-600 transition-colors">Behance</a>
+                    </div>
+                </div>
+    
             </div>
-
-
-    </main>
-
-
-
-</body>
+        </div>
+    </section>
 </html>
