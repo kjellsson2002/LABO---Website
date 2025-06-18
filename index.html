@@ -11,7 +11,7 @@
 </head>
 
     <!-- HERO SECTION START -->
-    <section class="px-10 pt-32 pb-20 bg-black">
+    <section class="px-10 pt-32 pb-20 bg-orange-50">
         <div class="container mx-auto">
             <div class="grid lg:grid-cols-2 items-center justify-items-center gap-10">
     
@@ -23,20 +23,24 @@
                         alt="A modern architectural building designed by Läbo" 
                     />
                 </div>
-    
-                <!-- Text Content Section -->
-                <div class="order-1 lg:order-2 flex flex-col justify-center lg:items-start lg:text-left">
-                    <p class="text-4xl font-bold md:text-7xl text-white">
-                        Vega Kjellsson
-                    </p>
-                    <p class="mt-2 text-3xl md:text-5xl text-white">
-                        Founder of <span class="text-orange-600">Läbo</span>
-                    </p>
-                    
-                    <!-- Typewriter Text Container -->
-                    <p class="text-3xl md:text-5xl text-white h-20 md:h-32 lg:h-24">
-                        We Design <span id="typewriter"></span>
-                    </p>
+    <div class="flex flex-col  lg:items-baseline">
+
+    <!-- "läbo" Text -->
+    <p class="text-8xl font-bold text-orange-950">
+        läbo
+    </p>
+
+    <!-- "Vega Kjellsson" Text -->
+    <!--
+      - On small screens, has a margin-top of 2 (mt-2).
+      - On large screens, the top margin is removed (lg:mt-0) and a left margin is added for spacing (lg:ml-4).
+    -->
+    <p class="mt-2 text-3xl text-orange-950 lg:mt-0 lg:ml-4">
+        Vega Kjellsson
+    </p>
+
+</div>
+        
                     
                     <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-lg">
                         An architectural studio devoted to crafting thoughtful and sustainable environments where form and function unite.
@@ -51,7 +55,46 @@
                             Our Work
                         </a>
                     </div>
-    
+    <section class="bg-orange-50 dark:bg-gray-500">
+    <div class="container px-6 py-10 mx-auto">
+        <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Portfolio
+        </h1>
+
+        <p class="mt-4 text-center text-gray-500 dark:text-gray-300">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
+        </p>
+
+
+        <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
+            <div>
+                <img class="object-cover w-full h-96 "
+                    src="https://images.unsplash.com/photo-1621111848501-8d3634f82336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1565&q=80"
+                    alt="">
+                <h2 class="mt-4 text-xl font-semibold text-gray-800 capitalize dark:text-white">Best website
+                    collections</h2>
+                <p class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">Website</p>
+            </div>
+
+            <div>
+                <img class="object-cover w-full h-96 "
+                    src="https://images.unsplash.com/photo-1621609764180-2ca554a9d6f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                    alt="">
+                <h2 class="mt-4 text-xl font-semibold text-gray-800 capitalize dark:text-white">Block of Ui kit
+                    collections</h2>
+                <p class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">Ui kit</p>
+            </div>
+
+            <div>
+                <img class="object-cover w-full h-96 "
+                    src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                    alt="">
+                <h2 class="mt-4 text-xl font-semibold text-gray-800 capitalize dark:text-white">Ton’s of mobile mockup
+                </h2>
+                <p class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">Mockups</p>
+            </div>
+        </div>
+    </div>
+</section>
                     <!-- Social Media Links Placeholder -->
                     <div class="mt-8 flex space-x-6">
                         <!-- Replace # with your actual links -->
