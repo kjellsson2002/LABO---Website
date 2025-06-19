@@ -9,39 +9,84 @@
     <!-- Link to your compiled Tailwind CSS file -->
     <link href="src/output.css" rel="stylesheet">
 
+<header class="relative p-4 bg-orange-50 text-orange-950 border-b border-gray-200">
+	<div class="container flex justify-between h-16 mx-auto">
+		
+        <!-- Logotyp -->
+		<a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2">
+			<!-- Jag har lagt till den saknade > i din img-tagg -->
+			<img src="Image/Resurs 2.svg" alt="läbo logo" class="h-10 w-auto">
+		</a>
+
+		<!-- Meny för Dator (orörd, förutom färgerna) -->
+		<ul class="items-stretch hidden space-x-3 md:flex">
+			<li class="flex">
+				<a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 border-transparent hover:text-orange-700 hover:border-orange-700">Om mig</a>
+			</li>
+			<li class="flex">
+				<a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 border-transparent hover:text-orange-700 hover:border-orange-700">Portfolio</a>
+			</li>
+			<li class="flex">
+				<a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 border-transparent hover:text-orange-700 hover:border-orange-700">Tjänster</a>
+			</li>
+			<li class="flex">
+				<a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 border-orange-800 text-orange-800 font-semibold">Kontakt</a>
+			</li>
+		</ul>
+
+		<!-- Hamburgarknapp för Mobil -->
+        <!-- Vi lägger till ett id för att kunna styra den med JavaScript -->
+		<button id="hamburger-button" class="flex justify-end p-4 md:hidden">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+			</svg>
+		</button>
+	</div>
+
+    <!-- RULLGARDINSMENY FÖR MOBIL -->
+    <!-- Denna div är dold från början och visas/döljs med JavaScript -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-orange-50 border-b border-gray-200">
+        <ul class="flex flex-col p-4">
+            <li>
+                <a href="#" class="block py-2 px-4 text-lg hover:bg-orange-100 rounded">Om mig</a>
+            </li>
+            <li>
+                <a href="#" class="block py-2 px-4 text-lg hover:bg-orange-100 rounded">Portfolio</a>
+            </li>
+            <li>
+                <a href="#" class="block py-2 px-4 text-lg hover:bg-orange-100 rounded">Tjänster</a>
+            </li>
+            <li>
+                <a href="#" class="block py-2 px-4 text-lg hover:bg-orange-100 rounded">Kontakt</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
     <section class="pl-10 pr-10 md:px-20 lg:px-30 pt-32 pb-20 bg-orange-50">
     <div class="container mx-auto">
         <div class="grid md:grid-cols-2 items-start gap-10">
 
-            <!-- Kolumn 1: Text -->
+           <div class="flex justify-center md:justify-left w-full mt-8 md:mt-0">
+                <img 
+                    class="w-full h-auto max-w-xs"
+                    src="Image/Resurs 1.svg"
+                    alt="A modern Architectural building"
+                />
+            </div> <!-- Kolumn 1: Text -->
             <!-- ▼▼▼ DENNA LÅDA ÄR CHEFEN - DEN STYR ALLT INUTI ▼▼▼ -->
             <div class="w-full flex flex-col items-center md:items-start">
                 
-                <!-- Namn-blocket. Det lyder chefen och blir centrerat/vänsterjusterat. -->
-                <div class="text-center md:text-left">
-                    <h1 class="text-8xl font-bold text-orange-950">
-                        läbo
-                    </h1>
-                    <h2 class="mt-2 text-3xl text-orange-950 md:mt-0 md:ml-4">
-                        Vega Kjellsson
-                    </h2>
-                </div>
+            
 
                 <!-- Beskrivning. Den lyder också chefen och blir centrerad/vänsterjusterad. -->
                 <!-- Vi lägger till text-justering här också för att texten inuti ska följa med. -->
-                <p class="mt-12 text-lg md:text-xl text-gray-700 max-w-lg text-center md:text-left">
-                    Ett litet arkitektur kontor.
+                <p class="mt-12 text-lg md:text-xl text-gray-700 max-w-lg text-left md:text-left">
+                    LÄBO är en arkitekturstudio som drivs av passionen för att skapa genomtänkta och hållbara livsmiljöer. Vi tror på en arkitektur där form och funktion förenas i en tidlös helhet. Med människan i centrum och en djup respekt för material och plats, formar vi rum som inspirerar, berör och består.
                 </p>
             </div>
 
-            <!-- Kolumn 2: Bild -->
-            <div class="flex justify-center w-full mt-8 md:mt-0">
-                <img 
-                    class="shadow-xl w-full h-auto max-w-xs"
-                    src="Image/25_År.png"
-                    alt="A modern Architectural building"
-                />
-            </div>
+           
         </div>
     </div>
 </section>
@@ -56,7 +101,7 @@
         <div class="w-full flex flex-col items-center md:items-start">
     
             <h2 class="text-5xl font-bold text-orange-950">
-                Tidigare projekt
+                Portfolio
             </h2>
 
             <!-- Beskrivning. Lyder också chefen. -->

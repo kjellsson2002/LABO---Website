@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 254.68 137.28">
+  <defs>
+    <style>
+      .cls-1 {
+        mix-blend-mode: hard-light;
+        stroke: #fbb03b;
+        stroke-miterlimit: 10;
+        stroke-width: 11.34px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+      }
+
+      .cls-3 {
+        isolation: isolate;
+      }
+
+      .cls-4 {
+        fill: #c1272d;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" x="10.4" y="64.85" width="244.28" height="72.43"/>
+    </clipPath>
+  </defs>
+  <g class="cls-3">
+    <g id="Lager_2" data-name="Lager 2">
+      <g id="Lager_2-2" data-name="Lager 2">
+        <g class="cls-5">
+          <g>
+            <g id="_Upprepat_stödraster_" data-name="&amp;lt;Upprepat stödraster&amp;gt;">
+              <circle class="cls-4" cx="55.86" cy="98.97" r="31.29"/>
+            </g>
+            <g id="_Upprepat_stödraster_-2" data-name="&amp;lt;Upprepat stödraster&amp;gt;">
+              <circle class="cls-4" cx="133.44" cy="98.97" r="31.29"/>
+            </g>
+            <g id="_Upprepat_stödraster_-3" data-name="&amp;lt;Upprepat stödraster&amp;gt;">
+              <circle class="cls-4" cx="211.02" cy="98.97" r="31.29"/>
+            </g>
+          </g>
+        </g>
+        <line class="cls-1" x1="5.67" x2="5.67" y2="129.7"/>
+        <line class="cls-1" x1="107.27" x2="107.27" y2="129.7"/>
+        <line class="cls-1" x1="82.07" y1="66.92" x2="82.07" y2="129.7"/>
+        <line class="cls-1" x1="81.63" y1="50.58" x2="29.48" y2="50.58"/>
+      </g>
+    </g>
+  </g>
+</svg>
