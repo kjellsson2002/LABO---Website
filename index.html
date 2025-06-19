@@ -9,7 +9,7 @@
     <!-- Link to your compiled Tailwind CSS file -->
     <link href="src/output.css" rel="stylesheet">
 
-<header class="relative p-4 bg-orange-50 text-orange-950 border-b border-gray-200">
+<header class="relative p-4 bg-orange-100 text-orange-950 border-b border-gray-200">
 	<div class="container flex justify-between h-16 mx-auto">
 		
         <!-- Logotyp -->
@@ -45,8 +45,8 @@
 
     <!-- RULLGARDINSMENY FÖR MOBIL -->
     <!-- Denna div är dold från början och visas/döljs med JavaScript -->
-    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-orange-50 border-b border-gray-200">
-        <ul class="flex flex-col p-4">
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full right-0 mt-2 w-56 bg-orange-50 border-b border-gray-200">
+        <ul class="flex flex-col p-2">
             <li>
                 <a href="#" class="block py-2 px-4 text-lg hover:bg-orange-100 rounded">Om mig</a>
             </li>
@@ -171,3 +171,17 @@
                             Our Work
                         </a>
                     </div>
+                    <footer></footer>
+
+                    <script>
+    // Hämta knappen och menyn från HTML-koden
+    const hamburgerButton = document.getElementById('hamburger-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Lägg till en "lyssnare" som väntar på att någon klickar på knappen
+    hamburgerButton.addEventListener('click', () => {
+        // När någon klickar, växla (toggle) klassen 'hidden' på menyn.
+        // Om den är dold blir den synlig, om den är synlig blir den dold.
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
