@@ -1,2 +1,55 @@
 @import "tailwindcss";
+@layer base {
+  body {
+    overflow-x: hidden;
+  }
+}
 
+/* 
+  ÄNDRING 2:
+  Här är den nya animationen. Den heter nu 'rulla-in-fran-hoger'
+  för att vara tydligare.
+*/
+@keyframes rulla-in-fran-hoger {
+  from {
+    /* Startar helt utanför skärmen (100vw = 100% av skärmens bredd) */
+    transform: translateX(100vw) rotate(0deg);
+    opacity: 0;
+  }
+  to {
+    /* Landar på sin plats (0) och har roterat två varv (720deg) */
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+/* --------------- APPLICERING AV ANIMATIONEN --------------- */
+/* 
+  ÄNDRING 3:
+  Vi uppdaterar alla dina cirklar så att de använder den nya animationen
+  och en mjuk timing (ease-out) istället för den studsiga.
+  Jag har även ökat tiden till 2s eftersom resan över skärmen är längre.
+  Du kan justera detta värde om du vill.
+*/
+#cirkel_A {
+  animation: rulla-in-fran-hoger 2s ease-out 0.2s forwards;
+}
+
+#cirkel_B {
+  animation: rulla-in-fran-hoger 2s ease-out 0.4s forwards;
+}
+
+#cirkel_O {
+  animation: rulla-in-fran-hoger 2s ease-out 0.6s forwards;
+}
+
+/* --------------- STYLING AV SVG MED ABSOLUT POSITIONERING (Oförändrad) --------------- */
+.logo-animation-container svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
