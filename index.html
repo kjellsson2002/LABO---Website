@@ -8,61 +8,61 @@
 
     <!-- Link to your compiled Tailwind CSS file -->
     <link href="src/output.css" rel="stylesheet">
-</head>
 
-    <!-- HERO SECTION START -->
-    <section class="px-10 pt-32 pb-20 bg-orange-50">
-        <div class="container mx-auto">
-            <div class="grid lg:grid-cols-2 items-center justify-items-center gap-10">
-    
-                <!-- Image Section -->
-                <div class="order-2 lg:order-1 shadow-2xl">
-                    <img 
-                        class="h-80 w-80 object-cover lg:w-[500px] lg:h-[500px]" 
-                        src="Image/25_År.png" 
-                        alt="A modern architectural building designed by Läbo" 
-                    />
+    <section class="pl-10 pr-10 md:px-20 lg:px-30 pt-32 pb-20 bg-orange-50">
+    <div class="container mx-auto">
+        <div class="grid md:grid-cols-2 items-start gap-10">
+
+            <!-- Kolumn 1: Text -->
+            <!-- ▼▼▼ DENNA LÅDA ÄR CHEFEN - DEN STYR ALLT INUTI ▼▼▼ -->
+            <div class="w-full flex flex-col items-center md:items-start">
+                
+                <!-- Namn-blocket. Det lyder chefen och blir centrerat/vänsterjusterat. -->
+                <div class="text-center md:text-left">
+                    <h1 class="text-8xl font-bold text-orange-950">
+                        läbo
+                    </h1>
+                    <h2 class="mt-2 text-3xl text-orange-950 md:mt-0 md:ml-4">
+                        Vega Kjellsson
+                    </h2>
                 </div>
-    <div class="flex flex-col  lg:items-baseline">
 
-    <!-- "läbo" Text -->
-    <p class="text-8xl font-bold text-orange-950">
-        läbo
-    </p>
+                <!-- Beskrivning. Den lyder också chefen och blir centrerad/vänsterjusterad. -->
+                <!-- Vi lägger till text-justering här också för att texten inuti ska följa med. -->
+                <p class="mt-12 text-lg md:text-xl text-gray-700 max-w-lg text-center md:text-left">
+                    Ett litet arkitektur kontor.
+                </p>
+            </div>
 
-    <!-- "Vega Kjellsson" Text -->
-    <!--
-      - On small screens, has a margin-top of 2 (mt-2).
-      - On large screens, the top margin is removed (lg:mt-0) and a left margin is added for spacing (lg:ml-4).
-    -->
-    <p class="mt-2 text-3xl text-orange-950 lg:mt-0 lg:ml-4">
-        Vega Kjellsson
-    </p>
+            <!-- Kolumn 2: Bild -->
+            <div class="flex justify-center w-full mt-8 md:mt-0">
+                <img 
+                    class="shadow-xl w-full h-auto max-w-xs"
+                    src="Image/25_År.png"
+                    alt="A modern Architectural building"
+                />
+            </div>
+        </div>
+    </div>
+</section>
 
-</div>
+<!-- ======================================================= -->
+<!-- SEKTION 2 (EN KOLUMN) - ANVÄNDER EXAKT SAMMA LOGIK -->
+<!-- ======================================================= -->
+<section class="pl-10 pr-10 md:px-20 lg:px-30 py-20 bg-orange-50">
+    <div class="container mx-auto">
         
-                    
-                    <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-lg">
-                        An architectural studio devoted to crafting thoughtful and sustainable environments where form and function unite.
-                    </p>
-                    
-                    <!-- Call to Action Buttons -->
-                    <div class='flex flex-col sm:flex-row items-center mt-10'>
-                        <a href='#contact' class="text-lg md:text-xl bg-orange-600 text-white py-3 px-6 my-2 hover:bg-zinc-800 rounded-full transition-colors duration-300">
-                            Contact Us
-                        </a>
-                        <a href='#projects' class="text-lg md:text-xl bg-gray-800 text-white py-3 px-6 m-2 mt-4 sm:mt-2 hover:bg-orange-600 rounded-full transition-colors duration-300">
-                            Our Work
-                        </a>
-                    </div>
-    <section class="bg-orange-50 dark:bg-gray-500">
-    <div class="container px-6 py-10 mx-auto">
-        <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">Portfolio
-        </h1>
+        <!-- ▼▼▼ DENNA LÅDA ÄR CHEFEN HÄR - EXAKT LIKADAN SOM OVAN ▼▼▼ -->
+        <div class="w-full flex flex-col items-center md:items-start">
+    
+            <h2 class="text-5xl font-bold text-orange-950">
+                Tidigare projekt
+            </h2>
 
-        <p class="mt-4 text-center text-gray-500 dark:text-gray-300">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum quam voluptatibus
-        </p>
+            <!-- Beskrivning. Lyder också chefen. -->
+            <p class="mt-4 text-lg text-gray-700 max-w-3xl text-center md:text-left">
+                Texten här beter sig nu exakt likadant.
+            </p>
 
 
         <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
@@ -92,6 +92,15 @@
                 </h2>
                 <p class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">Mockups</p>
             </div>
+            <div>
+                <img class="object-cover w-full h-96 "
+                    src="https://images.unsplash.com/photo-1621609764180-2ca554a9d6f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                    alt="">
+                <h2 class="mt-4 text-xl font-semibold text-gray-800 capitalize dark:text-white">Block of Ui kit
+                    collections</h2>
+                <p class="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">Ui kit</p>
+            </div>
+
         </div>
     </div>
 </section>
@@ -108,3 +117,12 @@
         </div>
     </section>
 </html>
+  <!-- Call to Action Buttons -->
+                    <div class='flex flex-col sm:flex-row items-center mt-10'>
+                        <a href='#contact' class="text-lg md:text-xl bg-orange-600 text-white py-3 px-6 my-2 hover:bg-zinc-800 rounded-full transition-colors duration-300">
+                            Contact Us
+                        </a>
+                        <a href='#projects' class="text-lg md:text-xl bg-gray-800 text-white py-3 px-6 m-2 mt-4 sm:mt-2 hover:bg-orange-600 rounded-full transition-colors duration-300">
+                            Our Work
+                        </a>
+                    </div>
