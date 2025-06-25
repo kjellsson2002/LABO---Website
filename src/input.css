@@ -1,55 +1,159 @@
 @import "tailwindcss";
-@layer base {
-  body {
-    overflow-x: hidden;
-  }
+
+@font-face {
+  font-family: 'Hubot';
+  src: url('/Font/Hubot-Sans.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal italic ;
+  font-display: swap;
 }
 
-/* 
-  ÄNDRING 2:
-  Här är den nya animationen. Den heter nu 'rulla-in-fran-hoger'
-  för att vara tydligare.
-*/
-@keyframes rulla-in-fran-hoger {
+.font-heading {
+  font-family: 'Hubot';
+  font-weight: 900;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+
+
+/* =================================================================== */
+/*  1. ANIMATIONENS DEFINITION (KEYFRAMES)
+/* =================================================================== */
+
+@keyframes rulla-in-fran-vanster {
   from {
-    /* Startar helt utanför skärmen (100vw = 100% av skärmens bredd) */
-    transform: translateX(100vw) rotate(0deg);
-    opacity: 0;
+    transform: translateX(-100vw) rotate(0deg);
+    opacity: 1;
   }
   to {
-    /* Landar på sin plats (0) och har roterat två varv (720deg) */
-    transform: translateX(0) rotate(0deg);
+    /* FIX: La tillbaka rotationen för en "rullande" effekt */
+    transform: translateX(0) rotate(-720deg);
     opacity: 1;
   }
 }
 
-/* --------------- APPLICERING AV ANIMATIONEN --------------- */
-/* 
-  ÄNDRING 3:
-  Vi uppdaterar alla dina cirklar så att de använder den nya animationen
-  och en mjuk timing (ease-out) istället för den studsiga.
-  Jag har även ökat tiden till 2s eftersom resan över skärmen är längre.
-  Du kan justera detta värde om du vill.
-*/
-#cirkel_A {
-  animation: rulla-in-fran-hoger 2s ease-out 0.2s forwards;
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-#cirkel_B {
-  animation: rulla-in-fran-hoger 2s ease-out 0.4s forwards;
-}
 
-#cirkel_O {
-  animation: rulla-in-fran-hoger 2s ease-out 0.6s forwards;
-}
+/* =================================================================== */
+/*  2. STOR LADDNINGSLOGGA (STARTSIDAN)
+/* =================================================================== */
 
-/* --------------- STYLING AV SVG MED ABSOLUT POSITIONERING (Oförändrad) --------------- */
+.logo-animation-container {
+  isolation: isolate;
+}
 .logo-animation-container svg {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  overflow: visible;
   width: 100%;
   max-width: 350px;
   height: auto;
 }
+
+/* Gemensam animation för den stora loggans cirklar */
+#cirkel_A, #cirkel_B, #cirkel_O {
+  animation: rulla-in-fran-vanster 2s ease-out forwards;
+  mix-blend-mode: hard-light;
+}
+#cirkel_O { animation-delay: 0.2s; }
+#cirkel_B { animation-delay: 0.4s; }
+#cirkel_A { animation-delay: 0.6s; }
+
+
+/* =================================================================== */
+/*  3. HEADER & MENY-STYLING
+/* =================================================================== */
+
+/* --- Mobilmenyn (oförändrad, den var redan bra) --- */
+.mobile-menu-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: color 0.2s ease-in-out;
+}
+.mobile-menu-link::before {
+  content: '';
+  height: 8px;
+  width: 8px;
+  background-color: #9A3412;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.2s ease-in-out;
+}
+.mobile-menu-link:hover { color: #c2410c; }
+.mobile-menu-link:hover::before { transform: scale(1); }
+
+/* --- Desktop-menyn (STOR UPPDATERING) --- */
+.desktop-menu-link {
+  position: relative;
+  z-index: 1; /* Säkerställer att texten ligger överst */
+  transition: color 0.2s ease-in-out;
+  isolation: isolate; /* Viktig fix för att z-index ska fungera korrekt */
+}
+.desktop-menu-link::after {
+  content: '';
+  position: absolute;
+  height: 40px; /* Mer passande storlek för en meny */
+  width: 40px;
+  background-color: #fce8d1; /* Ljusare färg för bakgrunden */
+  border-radius: 50%;
+  /* FIX: Centrerar cirkeln perfekt bakom texten */
+  top: 50%;
+  left: 50%;
+  /* FIX: Lägger cirkeln BAKOM texten */
+  z-index: -1;
+  /* FÖRBÄTTRING: Använder scale för en snyggare "pop"-animation */
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); /* Studsig, snabb transition */
+}
+/* Gemensam hover- och aktiv-regel för att minska repetition */
+.desktop-menu-link:hover,
+.menu-link-active {
+  color: #9A3412;
+}
+.desktop-menu-link:hover::after,
+.menu-link-active::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+.menu-link-active {
+  font-weight: 600;
+}
+
+
+/* =================================================================== */
+/*  4. HEADER-LOGGANS ANIMATION (STYRS AV SIDTYP)
+/* =================================================================== */
+
+/* --- Gemensam färg/form --- */
+#Header_Linjer_LaBO {
+  fill: none; stroke: #fbb03b; stroke-miterlimit: 10; stroke-width: 11.34;
+}
+#Header_cirkel_A, #Header_cirkel_B, #Header_cirkel_O {
+  fill: #c1272d; stroke: none; mix-blend-mode: hard-light;
+}
+
+/* --- Beteende på STARTSIDAN (.startsida) --- */
+
+.startsida #Header_Linjer_LaBO,
+.startsida #Header_cirkel_O,
+.startsida #Header_cirkel_B,
+.startsida #Header_cirkel_A {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.startsida .header-logo-visible #Header_Linjer_LaBO,
+.startsida .header-logo-visible #Header_cirkel_O,
+.startsida .header-logo-visible #Header_cirkel_B,
+.startsida .header-logo-visible #Header_cirkel_A {
+  opacity: 1;
+}
+
+/* --- Beteende på UNDERSIDOR (.undersida) --- */
+/* FIX: Använder fullständig shorthand för att undvika konflikter och har justerat tiderna */
+.undersida #Header_Linjer_LaBO 
+.undersida #Header_cirkel_A   { animation: fade-in 0.8s forwards 0.6s; }
+.undersida #Header_cirkel_B   { animation: fade-in 0.8s forwards 0.8s; }
+.undersida #Header_cirkel_O   { animation: fade-in 0.8s forwards 1.0s; }

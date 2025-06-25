@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | LÄBO</title>
+    <!-- Länka till SAMMA CSS-fil -->
+    <link href="src/output.css" rel="stylesheet">
+</head>
+
+<!-- Body-taggen för UNDERSIDOR -->
+<body class="undersida bg-orange-50">
+
+    <!-- ===== HEADER ===== -->
+    <!-- Detta är exakt samma header-kod som på de andra sidorna -->
+    <header class="sticky top-0 z-50 p-4 bg-orange-100 text-orange-950 border-b border-gray-200">
+        <div class="container flex justify-between h-16 mx-auto">
+            <!-- Logotyp -->
+            <a rel="noopener noreferrer" href="index.html" aria-label="Back to homepage" class="flex items-center p-2">
+                <svg class="h-10 w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298.32 127.28">
+                    <g isolation="isolate">
+                        <g id="Header_Linjer_LaBO" data-name="Header_Linjer LaBO"><g><line x1="150.91" x2="150.91" y2="119.7"/><line x1="125.72" y1="56.92" x2="125.72" y2="119.7"/><line x1="125.27" y1="40.58" x2="73.12" y2="40.58"/><line x1="15.83" y1="7.58" x2="15.83" y2="122.61"/><line x1="62.78" y1="116.8" x2="10.13" y2="116.8"/></g></g>
+                        <g id="Header_cirkel_O" data-name="cirkel O"><circle cx="254.69" cy="88.97" r="30.98"/></g>
+                        <g id="Header_cirkel_B" data-name="cirkel B"><circle cx="176.69" cy="88.97" r="30.98"/></g>
+                        <g id="Header_cirkel_A" data-name="cirkel A"><circle cx="98.69" cy="88.97" r="30.98"/></g>
+                    </g>
+                </svg>
+            </a>
+            <!-- Meny för Dator -->
+            <ul class="items-stretch hidden space-x-3 md:flex">
+                <li class="flex"><a rel="noopener noreferrer" href="om-mig.html" class="flex items-center px-4 -mb-1 border-b-2 border-transparent desktop-menu-link"><span>Om Mig</span></a></li>
+                <!-- VIKTIGT: "Portfolio" är nu den aktiva länken -->
+                <li class="flex"><a rel="noopener noreferrer" href="portfolio.html" class="flex items-center px-4 -mb-1 border-b-2 border-transparent desktop-menu-link menu-link-active"><span>Portfolio</span></a></li>
+                <li class="flex"><a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 border-transparent desktop-menu-link">Tjänster</a></li>
+                <li class="flex"><a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 border-transparent desktop-menu-link">Kontakt</a></li>
+            </ul>
+            <!-- Hamburgarknapp för Mobil -->
+            <button id="hamburger-button" class="flex justify-end p-4 md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+        <!-- Rullgardinsmeny för Mobil -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full right-0 mt-2 w-56 bg-orange-50 border-b border-gray-200">
+            <ul class="flex flex-col p-2">
+                <li><a href="om-mig.html" class="block py-2 px-4 text-lg mobile-menu-link">Om mig</a></li>
+                <li><a href="portfolio.html" class="block py-2 px-4 text-lg mobile-menu-link">Portfolio</a></li>
+                <li><a href="#" class="block py-2 px-4 text-lg mobile-menu-link">Tjänster</a></li>
+                <li><a href="#" class="block py-2 px-4 text-lg mobile-menu-link">Kontakt</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ===== HUVUDINNEHÅLL (MAIN) ===== -->
+    <main>
+        <!-- Rubriksektion -->
+        <section class="py-12 px-4 md:px-8 lg:px-16 text-center md:text-left">
+            <div class="container mx-auto">
+                <h1 class="text-6xl font-heading text-orange-950">Tidigare Projekt</h1>
+                <p class="mt-4 text-xl text-orange-800 max-w-3xl mx-auto">
+                    Här visar vi några av de projekt vi är extra stolta över. Varje projekt representerar en unik utmaning och en skräddarsydd lösning som speglar våra kunders visioner och behov.
+                </p>
+            </div>
+        </section>
+
+        <!-- Gallerisektion -->
+        <section class="pb-12 px-4 md:px-8 lg:px-16">
+            <div class="container mx-auto">
+                <!-- Grid för projektkort -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Projektkort 1 -->
+                    <div class="bg-white overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=1974" alt="Projektbild 1" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-orange-900 mb-2">Marnömt</h3>
+                            <p class="text-orange-800">En modern familjevilla som smälter in i den omgivande naturen. Fokus på ljusinsläpp och hållbara materialval.</p>
+                        </div>
+                    </div>
+
+                    <!-- Projektkort 2 -->
+                    <div class="bg-white overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070" alt="Projektbild 2" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-orange-900 mb-2">Eljest</h3>
+                            <p class="text-orange-800">Ombyggnation av befintliga lokaler till ett dynamiskt och flexibelt kontor för ett växande tech-bolag.</p>
+                        </div>
+                    </div>
+
+                    <!-- Projektkort 3 -->
+                    <div class="bg-white overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071" alt="Projektbild 3" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-orange-900 mb-2">Myrvakt</h3>
+                            <p class="text-orange-800">Ett kompakt och funktionellt tillbyggnadsprojekt som fungerar som ateljé och gästhus med utsikt över havet.</p>
+                        </div>
+                    </div>
+
+                    <!-- Projektkort 4 (Lägg till fler vid behov) -->
+                    <div class="bg-white overflow-hidden group">
+                        <img src="https://images.unsplash.com/photo-1558036117-15d82a90b9b1?q=80&w=1974" alt="Projektbild 4" class="w-full h-56 object-cover transform group-hover:scale-105 transition-transform duration-300">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-orange-900 mb-2">Flärkbädd</h3>
+                            <p class="text-orange-800">Varsam renovering av en sekelskiftesvåning med bevarade detaljer och moderna bekvämligheter.</p>
+                        </div>
+                    </div>
+
+                    <!-- Fler kort kan klistras in här -->
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Script för hamburgarmeny (behövs på alla sidor)
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (hamburgerButton && mobileMenu) {
+            hamburgerButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

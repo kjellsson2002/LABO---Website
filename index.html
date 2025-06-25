@@ -4,66 +4,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vegas sida</title>
+    <title>Vegas sida</title> 
 
     <!-- Link to your compiled Tailwind CSS file -->
     <link href="src/output.css" rel="stylesheet">
 
-<header class="relative p-4 bg-orange-100 text-orange-950 border-b border-gray-200">
+<header class="sticky top-0 z-50 p-4 bg-orange-100 text-orange-950 border-b border-gray-200">
 	<div class="container flex justify-between h-16 mx-auto">
 		
         <!-- Logotyp -->
-		<a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2">
-			<!-- Jag har lagt till den saknade > i din img-tagg -->
-			<img src="Image/Resurs 2.svg" alt="läbo logo" class="h-10 w-auto">
-		</a>
+		<a rel="noopener noreferrer" href="index.html" aria-label="Back to homepage" class="flex items-center p-2">
+	<svg class="h-10 w-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 298.32 127.28">
+  <g isolation="isolate">
+    <!-- ID:t är nu unikt för headern! -->
+    <g id="Header_Linjer_LaBO" data-name="Header_Linjer LaBO">
+      <g>
+        <line x1="150.91" x2="150.91" y2="119.7"/>
+        <line x1="125.72" y1="56.92" x2="125.72" y2="119.7"/>
+        <line x1="125.27" y1="40.58" x2="73.12" y2="40.58"/>
+        <line x1="15.83" y1="7.58" x2="15.83" y2="122.61"/>
+        <line x1="62.78" y1="116.8" x2="10.13" y2="116.8"/>
+      </g>
+    </g>
+    <!-- Cirkel-ID:na är redan unika, så de behöver inte ändras -->
+    <g id="Header_cirkel_O" data-name="cirkel O">
+      <circle cx="254.69" cy="88.97" r="30.98"/>
+    </g>
+    <g id="Header_cirkel_B" data-name="cirkel B">
+      <circle cx="176.69" cy="88.97" r="30.98"/>
+    </g>
+    <g id="Header_cirkel_A" data-name="cirkel A">
+      <circle cx="98.69" cy="88.97" r="30.98"/>
+    </g>
+  </g>
+</svg>
 
 		<!-- Meny för Dator (orörd, förutom färgerna) -->
 		<ul class="items-stretch hidden space-x-3 md:flex">
-			<li class="flex">
-				<a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 border-transparent hover:text-orange-700 hover:border-orange-700">Om mig</a>
-			</li>
-			<li class="flex">
-				<a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 border-transparent hover:text-orange-700 hover:border-orange-700">Portfolio</a>
-			</li>
-			<li class="flex">
-				<a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 border-transparent hover:text-orange-700 hover:border-orange-700">Tjänster</a>
-			</li>
-			<li class="flex">
-				<a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 border-orange-800 text-orange-800 font-semibold">Kontakt</a>
-			</li>
-		</ul>
-
+    <li class="flex">
+        <!-- ÄNDRING: Ny klass tillagd, gamla hover-klasser borttagna -->
+        <a rel="noopener noreferrer" href="om-mig.html" class="flex items-center px-4 -mb-1 border-b-2 border-transparent desktop-menu-link"><span>Om Mig</span></a>
+    </li>
+    <li class="flex">
+        <a rel="noopener noreferrer" href="portfolio.html" class="flex items-center px-4 -mb-1 border-b-2 border-transparent desktop-menu-link">Portfolio</a>
+    </li>
+    <li class="flex">
+        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 border-transparent desktop-menu-link">Tjänster</a>
+    </li>
+    <li class="flex">
+        <!-- ÄNDRING: Denna länk får nu en 'active'-klass istället för specifika färg-klasser -->
+        <a rel="noopener noreferrer" href="#" class="flex items-center px-4 -mb-1 border-b-2 border-transparent desktop-menu-link">Kontakt</a>
+    </li>
+</ul>
 		<!-- Hamburgarknapp för Mobil -->
         <!-- Vi lägger till ett id för att kunna styra den med JavaScript -->
 		<button id="hamburger-button" class="flex justify-end p-4 md:hidden">
 			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
 			</svg>
-		</button>
-	</div>
+		</button>  
 
-    <!-- RULLGARDINSMENY FÖR MOBIL -->
+	</div> 
+
+    <!-- RULLGARDINSMENY FÖR MOBIL --> 
     <!-- Denna div är dold från början och visas/döljs med JavaScript -->
     <div id="mobile-menu" class="hidden md:hidden absolute top-full right-0 mt-2 w-56 bg-orange-50 border-b border-gray-200">
         <ul class="flex flex-col p-2">
             <li>
-                <a href="#" class="block py-2 px-4 text-lg hover:bg-orange-100 rounded">Om mig</a>
+                <a href="om-mig.html" class="block py-2 px-4 text-lg hover:bg-orange-100 mobile-menu-link">Om mig</a>
             </li>
             <li>
-                <a href="#" class="block py-2 px-4 text-lg hover:bg-orange-100 rounded">Portfolio</a>
+                <a href="portfolio.html" class="block py-2 px-4 text-lg hover:bg-orange-100 mobile-menu-link">Portfolio</a>
             </li>
             <li>
-                <a href="#" class="block py-2 px-4 text-lg hover:bg-orange-100 rounded">Tjänster</a>
+                <a href="#" class="block py-2 px-4 text-lg hover:bg-orange-100 mobile-menu-link">Tjänster</a>
             </li>
             <li>
-                <a href="#" class="block py-2 px-4 text-lg hover:bg-orange-100 rounded">Kontakt</a>
+                <a href="#" class="block py-2 px-4 text-lg hover:bg-orange-100 mobile-menu-link">Kontakt</a>
             </li>
         </ul>
     </div>
 </header>
 
-    <section class="pl-10 pr-10 md:px-20 lg:px-30 pt-32 pb-20 bg-orange-50">
+
+
+
+
+<body class="startsida"></body>
+    <section class="pl-10 pr-10 md:px-20 lg:px-30 pt-20 pb-20 bg-orange-50">
     <div class="container mx-auto">
         <div class="grid md:grid-cols-2 items-start gap-10">
     
@@ -102,7 +130,7 @@
 
                 <!-- Beskrivning. Den lyder också chefen och blir centrerad/vänsterjusterad. -->
                 <!-- Vi lägger till text-justering här också för att texten inuti ska följa med. -->
-                <p class="mt-12 text-lg md:text-xl text-gray-700 max-w-lg text-left md:text-left">
+                <p class="md:mt-40 text-lg md:text-xl text-gray-700 max-w-lg text-left md:text-left">
                     LÄBO är en arkitekturstudio som drivs av passionen för att skapa genomtänkta och hållbara livsmiljöer. Vi tror på en arkitektur där form och funktion förenas i en tidlös helhet. Med människan i centrum och en djup respekt för material och plats, formar vi rum som inspirerar, berör och består.
                 </p>
             </div>
@@ -183,6 +211,7 @@
         </div>
     </section>
 </html>
+</body>
   <!-- Call to Action Buttons -->
                     <div class='flex flex-col sm:flex-row items-center mt-10'>
                         <a href='#contact' class="text-lg md:text-xl bg-orange-600 text-white py-3 px-6 my-2 hover:bg-zinc-800 rounded-full transition-colors duration-300">
@@ -204,5 +233,33 @@
         // När någon klickar, växla (toggle) klassen 'hidden' på menyn.
         // Om den är dold blir den synlig, om den är synlig blir den dold.
         mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        // Om vi är på startsidan, kör scroll-logiken
+        if (document.body.classList.contains('startsida')) {
+            const header = document.querySelector('header');
+            const storLogga = document.querySelector('.logo-animation-container');
+
+            // Kontrollera att elementen faktiskt finns innan vi fortsätter
+            if (header && storLogga) {
+                const handleScroll = () => {
+                    const storLoggaHojd = storLogga.offsetHeight;
+
+                    if (window.scrollY > storLoggaHojd) {
+                        header.classList.add('header-logo-visible');
+                    } else {
+                        header.classList.remove('header-logo-visible');
+                    }
+                };
+                window.addEventListener('scroll', handleScroll);
+            }
+        }
+        
+        // (Här kan du lägga annan JavaScript som ska köras på ALLA sidor, t.ex. för mobilmenyn)
+        
     });
 </script>
